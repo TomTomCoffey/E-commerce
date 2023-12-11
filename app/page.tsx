@@ -1,11 +1,10 @@
-import Image from 'next/image'
-import Nav from './components/Nav'
+import React from 'react'
+import { useRouter } from 'next/router'
+
 
 export default function Home() {
   return (
     <main>
-      <Nav />
-  
        <div className="h2">Hello World</div>
     </main>
   )

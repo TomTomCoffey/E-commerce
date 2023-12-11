@@ -35,13 +35,13 @@ const Nav = () => {
             </ul>
           </details>
         </li>
-        <li><Link href="/about"> About</Link></li>
+        <li><Link href="/purchases"> Purchases</Link></li>
       </ul>
     </div>
     <div className="navbar-end">
-      <a className="btn btn-accent">Login</a>
+      <Link href="/login" className="btn btn-accent">Login</Link>
       <span></span>
-      <a className="btn btn-primary">Signup</a>
+      <Link href="/sign" className="btn btn-primary">Sign Up</Link>
     </div>
   </div>
   )

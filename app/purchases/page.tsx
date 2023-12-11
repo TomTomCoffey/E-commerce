@@ -1,13 +1,11 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import LoginClient from '../components/LoginClient'
-
+import SignUpClient from '../components/SignUpClient'
 
 const page = () => {
-
   return (
     <div>
-        <LoginClient />   
+        <div className="h1">Purchases</div> 
     </div>
   )
 }
