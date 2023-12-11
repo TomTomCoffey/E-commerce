@@ -30,8 +30,8 @@ const Nav = () => {
           <details>
             <summary>Vendors</summary>
             <ul className="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
+              <li><Link href="/vendors/local">Local</Link></li>
+              <li><Link href="/vendors/global">Global</Link></li>
             </ul>
           </details>
         </li>
