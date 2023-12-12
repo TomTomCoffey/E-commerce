@@ -1,0 +1,30 @@
+.cart {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.cartitem {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    padding-right: 5px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: lavenderblush;
+
+}
+
+.cartitem img {
+    width: 100px;
+    height: 100px;
+}
+
+.small {
+    font-size: 0.5em;
+}
+
+

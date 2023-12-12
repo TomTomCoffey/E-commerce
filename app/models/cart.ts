@@ -27,5 +27,11 @@ export function addToCart(product: Product) {
     }
 }
 
+export const total = () => {
+    return cart.reduce((total, item) => {
+        return total + item.product.price * item.quantity;
+    }, 0);
+}
+
 
 

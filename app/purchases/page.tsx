@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import SignUpClient from '../components/SignUpClient'
+
 
 const page = () => {
   return (
