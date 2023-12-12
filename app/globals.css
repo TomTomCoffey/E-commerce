@@ -110,6 +110,36 @@ body {
   text-align: center;
 }
 
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: aliceblue;
+}
+
+.product {
+  flex-basis: 12rem;
+  flex-grow: 1;
+  padding: .5rem;
+  margin: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  max-height: 600px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
 
 
 
