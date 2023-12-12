@@ -26,6 +26,12 @@ export function addToCart(product: Product) {
         });
     }
 }
+export function removeFromCart(productId: number) {
+    const index = cart.findIndex((p) => p.productId == productId);
+    if (index != -1) {
+        cart.splice(index, 1);
+    }
+}
 
 export const total = () => {
     return cart.reduce((total, item) => {

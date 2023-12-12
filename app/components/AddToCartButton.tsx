@@ -12,7 +12,7 @@ const products = getProducts()
 
 
 const AddToCartButton = () => {
-  return (
+  return (////this is just for testing
     <button className={`${styles.btn} ${styles.primaryBtn}`} onClick={() => addToCart(products[0])}>Add to Cart</button>
   )
 }

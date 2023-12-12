@@ -14,7 +14,7 @@
     padding-right: 5px;
     border-radius: 15px;
     overflow: hidden;
-    background-color: lavenderblush;
+    background-color: rgb(194, 205, 208);
 
 }
 
@@ -26,5 +26,20 @@
 .small {
     font-size: 0.5em;
 }
+
+.btn{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: lightblue;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(0, 0, 255);
+    color: white;
+}
+
 
 
