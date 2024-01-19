@@ -1,28 +1,31 @@
-'use client';
-import React from 'react';
-import { getProducts, type Product } from '../models/products';
-import styles from './Products.module.css';
-import { useCart } from '../models/cart';
-import { addToCart } from '../models/cart';
+"use client";
+import React from "react";
+import { getAllProducts, type Product } from "../models/products";
+import styles from "./Products.module.css";
+import useCart from "../models/cart";
+import { useEffect } from "react";
+import { useState } from "react";
+import Flyout from "../components/Flyout";
+//import { useSession } from "next-auth/react";
 
-
-const cart = useCart();
 
 const Pages = () => {
+  const [cart, addToCart] = useCart();
 
-  function addToCartHelp(product: Product) {
-    addToCart(product);
-    console.log("Added to cart");
-    console.log(product);
-  }
-
-
+  // const { status, data: session } = useSession();
+  // useEffect(() => {
+  //   if (status === "unauthenticated") {
+  //     console.log("unauthenticated");
+  //   } else {
+  //     console.log(session);
+  //   }
+  // }, [status]);
 
   return (
     <div className={styles.productList}>
       <h1 className={styles.title}>Products</h1>
       <div className={styles.productsContainer}>
-        {getProducts().map((product: Product) => (
+        {getAllProducts().map((product: Product) => (
           <div key={product.id} className={styles.productCard}>
             <img
               src={product.thumbnail}
@@ -36,11 +39,18 @@ const Pages = () => {
                 <span className={styles.currency}>$</span>
                 <span className={styles.productPrice}>{product.price}</span>
               </div>
-              <button className={`${styles.btn} ${styles.primaryBtn}`} onClick={() => addToCartHelp(product)}>Add to Cart</button>
-    </div>
+              {/* <button className={`${styles.btn} ${styles.primaryBtn}`} onClick={() => addToCartHelp(product)}>Add to Cart</button> */}
+              <button
+                className={`${styles.btn} ${styles.primaryBtn}`}
+                onClick={() => addToCart(product)}
+              >
+                Add to Cart
+              </button>
+            </div>
           </div>
         ))}
       </div>
+      <Flyout cart={cart} />
     </div>
   );
 };

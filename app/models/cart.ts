@@ -19,6 +19,8 @@ export default function useCart(): [CartItem[], (product: Product) => void] {
   return [cart, addToCart];
 }
 
+
+
 export interface CartItem {
   productId: number;
   product: Product;
