@@ -1,15 +1,18 @@
-import React from 'react'
-import Cart from './Cart'
-import styles from './Flyout.module.css'
+import React, { FC } from "react";
+import Cart from "./Cart";
+import styles from "./Flyout.module.css";
+import { CartItem } from "../models/cart";
 
-const Flyout = () => {
-  return (
-    <div className={styles.flyout}>
-        <Cart
-         
-         />
-    </div>
-  )
+interface FlyoutProps {
+  cart: CartItem[];
 }
 
-export default Flyout
+const Flyout: FC<FlyoutProps> = ({ cart }) => {
+  return (
+    <div className={styles.flyout}>
+      <Cart cart={cart} />
+    </div>
+  );
+};
+
+export default Flyout;

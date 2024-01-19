@@ -8,6 +8,8 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     transition: right 0.5s ease-in-out;
     overflow-y: scroll;
+    z-index: 100;
+    border-radius: 1rem 0 0 1rem;
 }
 .flyout.is-active {
     right: 0;

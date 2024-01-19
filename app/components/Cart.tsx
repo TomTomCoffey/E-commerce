@@ -1,21 +1,22 @@
 "use client";
-import React from "react";
-import { useCart, total, removeFromCart } from "../models/cart";
+import React, { FC } from "react";
+import useCart, { total, removeFromCart, CartItem } from "../models/cart";
 import styles from "./Cart.module.css";
+import { useEffect } from "react";
+import { useState } from "react";
+import Flyout from "./Flyout";
 
-const cart = useCart();
+interface CartProps {
+  cart: CartItem[];
+}
 
-const tot = total;
-
-const Cart = () => {
-  // Replace 0 with your actual total value
-
+const Cart: FC<CartProps> = ({ cart }) => {
   return (
     <div>
       <div className={styles.cart}>
         <h1 className={styles.title}>
           Cart
-          <small>(tot) ({cart.length} items)</small>
+          <small>(total) ({cart.length} items)</small>
         </h1>
       </div>
       <p></p>
